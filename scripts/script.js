@@ -126,27 +126,27 @@ function lancerJeu() {
     afficherProposition(listeProposition[i])
 
     // Gestion de l'événement click sur le bouton "valider"
-    btnValiderMot.addEventListener("click", validerMot);
+    btnValiderMot.addEventListener("click", validerMot)
 
     // Gestion de l'événement keydown pour la validation au clavier
     inputEcriture.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
-            validerMot();
+            validerMot()
         }
-    });
+    })
 
     function validerMot() {
         if (inputEcriture.value === listeProposition[i]) {
-            score++;
+            score++
         }
         i++;
-        afficherResultat(score, i);
-        inputEcriture.value = '';
+        afficherResultat(score, i)
+        inputEcriture.value = ''
         if (listeProposition[i] === undefined) {
-            afficherProposition("Le jeu est fini");
-            btnValiderMot.disabled = true;
+            afficherProposition("Le jeu est fini")
+            btnValiderMot.disabled = true
         } else {
-            afficherProposition(listeProposition[i]);
+            afficherProposition(listeProposition[i])
         }
     }
 
